@@ -7,6 +7,14 @@
     display: inline-block;
 }
 
+.container__botao:checked~.container__rotulo>.cabeçalho__menu-hamburguer {
+    background-image: url("../img/Menu Aberto.svg");
+}
+
+.container__botao:checked~.container__rotulo {
+    background: var(--azul-degrade);
+}
+
 .cabeçalho {
     background-color: var(--branco);
     display: flex;
@@ -52,7 +60,6 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-transform: uppercase;
-    text-decoration: none;
 }
 
 .container__botao {
@@ -63,7 +70,7 @@
     display: none;
 }
 
-.opcoes {
+.opções {
     display: none;
 }
 
@@ -71,16 +78,10 @@
     display: none;
 }
 
-.container__botao:checked ~ .container__rotulo > .cabeçalho__menu-hamburguer {
-    background-image: url("../img/Menu Aberto.svg");
-}
-
-.container__botao:checked~.container__rotulo {
-    background: var(--azul-degrade);
-}
-
 @media screen and (min-width: 1024px) {
-    .container__titulo, .container__titulo--negrito {
+
+    .container__titulo,
+    .container__titulo--negrito {
         font-family: var(--fonte-secundario);
         font-size: 30px;
     }
@@ -94,16 +95,16 @@
         font-weight: 700;
     }
 
-    .opcoes {
+    .opções {
         display: flex;
     }
 
-    .opcoes__item {
+    .opções__item {
         padding: 0 1em;
         text-transform: uppercase;
     }
 
-    .opcoes__link {
+    .opções__link {
         text-decoration: none;
         color: var(--preto);
     }
@@ -116,21 +117,21 @@
         display: none;
     }
 
-    .opcoes__botao:checked~.lista-menu {
+    .opções__botão:checked~.lista-menu {
         display: block;
         width: auto;
     }
 
-    .opcoes__botao {
+    .opções__botão {
         display: none;
     }
 
-    .opcoes__botao:checked ~ .opcoes__rotulo > .opcoes__item {
+    .opções__botão:checked~.opções__rotulo>.opções__item {
         background: var(--azul-degrade);
         color: var(--branco);
     }
 
-    .opcoes__item {
+    .opções__item {
         padding: 2em 1em;
     }
 
@@ -138,11 +139,11 @@
         background: var(--azul-degrade);
     }
 
-    .lista-menu__item:hover > .lista-menu__link {
+    .lista-menu__item:hover>.lista-menu__link {
         -webkit-text-fill-color: var(--branco);
         text-decoration: none;
     }
-    
+
 }
 
 @media screen and (min-width: 1728px) {
@@ -157,7 +158,7 @@
         padding: 0 2em;
     }
 
-    .opcoes {
+    .opções {
         margin-right: auto;
     }
 
